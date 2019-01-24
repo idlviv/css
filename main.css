@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+header {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 100px;
+    background-color: grey;
+    box-shadow: 10px 10px 10px rgba(0,0,0,.5);
+}
+header h1 {
+    color: darkblue;
+}
+
+header p {
+    color: darkblue;
+}
+main {
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    background-color: lightgray;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    padding-top: 50px;
+    background-color: lightseagreen;
+}
