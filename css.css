@@ -1,0 +1,119 @@
+regex
+^ - start with
+$ - end with
+
+SELECTORS
+pseudo selectors
+h1::before {content: 'this is title '}
+h1::after
+h1::selection {color: #FFFFFF; background-color: #993366;} - only this properties
+
+attribute selectors
+img[alt] {} - all images with 'alt' attribute
+a[href^="http://"] {} - all links that start with 'http://'
+a[href$=".pdf"] {} - all links on pdf files
+a[href*="products"] {} - all links that containe word 'products'
+
+h1, .class1 - all h1 and all with class 'class1'
+h1.class1 - all h1 with class 'class1'
+h1 .class1 - all descandants of h1 with 'class1'
+body h1 - all h1 that are dendants of body
+
+body>h1 - all h1 direct descendant (child) of body
+
+//page 88 ..
+h1:nth-child(odd) 
+h1:nth-child(even)
+h1:nth-child(2n) - every second h1
+h1:first-child - all h1 that is first child element (on all levels)
+h1:last-child
+
+h1:only-child - if h1 is the only one child, not if there are other children
+
+.sidebar p:last-of-type - last with tag 'p' in 'sidebar' class, like :last-child, but
+	- if real last child is h1 (.sidebar:last-child takes h1) (.sidebar p:last-of-type takes p)
+:first-of-type
+:nth-of-type
+
+h2+p - p that is the next sibling with h2
+h2~p - all p that are siblings with h2
+
+p:not(.class1) - all p without 'class1'
+a[href^="http://"]:not([href^="http://mysite.com"]) - all links, but not links on 'mysite'
+
+FONTS
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:200,300,400|Roboto:300,400&subset=cyrillic');
+
+font: [font-style||font-variant||font-weight] font-size [/line-height] font-family | inherit
+font: italic bold small-caps 18px/1.5 Arial, Helvetica, sans-serif;
+
+p {
+	font-family: "Roboto, 'Fira Sans', sans-serif";
+	color: rgba(255, 100, 50, .5);
+	font-size: large; //xx-small, x-small, small, medium, large, x-large, xx-large
+	font-size: 16px; //rem, em, %
+	font-style: normal; //normal | italic | oblique | inherit
+	font-weight: 400; //bold|bolder|lighter|normal|100|200|300|400|500|600|700|800|900
+	text-transform: uppercase; //capitalize | lowercase | uppercase | none | inherit
+	font-variant: normal; //normal | small-caps | inherit
+	text-decoration: underline; //[ blink || line-through || overline || underline ] | none | inherit
+	text-align: center; //left, right, justify, center
+}
+
+UL/OL
+list-style: list-style-type || list-style-position || list-style-image | inherit
+
+list-style-type: circle | disc | square | armenian | decimal | decimal-leading-zero | georgian | lower-alpha | lower-greek | lower-latin | lower-roman | upper-alpha | upper-latin | upper-roman | none | inherit
+
+list-style-position: inside | outside
+list-style-image: none | url('путь к файлу') | inherit
+
+ul li {
+list-style-type: none;
+}
+ul li:before {
+content: counter(item, disc) ' ';
+color: red;
+}
+
+border-radius: 20px; border-radius: 40px/20px;
+
+text-shadow: none | тень [,тень]*
+	где тень:
+	<сдвиг по x> <сдвиг по y> <радиус размытия> <цвет>
+
+box-shadow: none | <тень> [,<тень>]*
+	где <тень>:
+	inset <сдвиг по x> <сдвиг по y> <yрадиус размытия> <растяжение> <цвет> - inset  внутрішня тінь
+box-shadow: 4px 4px 8px rgba(0,0,0,.75); box-shadow: inset 4px 4px 8px rgba(0,0,0,.75);
+
+box-sizing: content-box | border-box | padding-box | inherit
+
+overflow: auto | hidden | scroll | visible | inherit
+
+FLOAT
+float: left | right | none | inherit
+clear: none | left | right | both | inherit
+
+BACKGROUND unsplash.com foter.com freeimages.com stripegenerator.com
+background: [<фон>, ]* <последний_фон>
+	<фон> = [background-attachment || background-image || background-position || background-repeat] | inherit
+	<последний_фон> = [background-attachment || background-color || background-image || background-position || background-repeat] | inherit	
+	
+background-image: url(images/bg.png);
+	
+background-repeat: <повторение> [ , <повторение> ]* 
+	<повторение> = repeat-x | repeat-y | [repeat | space | round | no-repeat]{1,2}
+ 
+background-position: <позиция>[, <позиция>]*
+	<позиция> = [left | center | right | <проценты> | <значение>] || [top | center | bottom | <проценты> | <значение>] | inherit
+	
+background-attachment: fixed | scroll | local[, fixed | scroll | local
+
+background-origin: [padding-box | border-box | content-box] [, [padding-box | 	border-box | content-box]]* старт зображення
+
+background-clip: [padding-box | border-box | content-box] [, [padding-box | border-box | content-box]] обмеження зображення
+
+background-size: [ <значение> | <проценты> | auto ]{1,2} | cover | contain
+
+background-blend-mode: normal|multiply|screen|overlay|darken|lighten|color-dodge|saturation|color|luminosity;
