@@ -99,9 +99,17 @@ BACKGROUND unsplash.com foter.com freeimages.com stripegenerator.com
 background: [<фон>, ]* <последний_фон>
 	<фон> = [background-attachment || background-image || background-position || background-repeat] | inherit
 	<последний_фон> = [background-attachment || background-color || background-image || background-position || background-repeat] | inherit	
+
+background: url(bullseye.gif) center center / 50% no-repeat fixed #FFF;
 	
+background: url(scrollTop.jpg) center top no-repeat,
+			url(scrollBottom.jpg) center bottom no-repeat,
+			url(scrollMiddle.jpg) center top repeat-y;
+
 background-image: url(images/bg.png);
-	
+background-image: linear-gradient(to bottom right, orange, red);
+background-image: linear-gradient(to right, black, white, black);
+
 background-repeat: <повторение> [ , <повторение> ]* 
 	<повторение> = repeat-x | repeat-y | [repeat | space | round | no-repeat]{1,2}
  
@@ -117,3 +125,6 @@ background-clip: [padding-box | border-box | content-box] [, [padding-box | bord
 background-size: [ <значение> | <проценты> | auto ]{1,2} | cover | contain
 
 background-blend-mode: normal|multiply|screen|overlay|darken|lighten|color-dodge|saturation|color|luminosity;
+
+LINKS
+a:link, :visited, :hover, :active
