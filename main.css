@@ -48,26 +48,27 @@ nav a:hover { color: #470; }
 nav a:active {color: #B2F511; }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding-left: 0;  /* disable ul defaults */
     margin-left: 0; /* disable ul defaults */
 }
 
 nav li {
     padding: 0 16px;
+
  }
 
 .horizontalNavigation li {
   display: inline-block;
 }
 
-.verticalNavigation {
+/* .verticalNavigation {
   float: left;
   padding: 10px;
-}
+} */
 
  .verticalNavigation li {
-    display: block;
+    /* display: block; */
 
  }
 
