@@ -201,3 +201,23 @@ animation: fadeOut 2s ease-in-out 5s 2 alternate forwards;
 	animation-direction: alternate;
 	animation-fill-mode: forwards; /* retain the style values from the last keyframe  */
 }
+
+POSITION
+position: static | absolute | relative | fixed
+relative - relative to normal stream
+absolute - relative to window or parent if it has non static position
+
+z-index: число | auto | inherit  К любым позиционированным элементам (non static)
+.banner {
+	position: absolute;
+	left: 100px;
+	top: 50px;
+}
+
+/* img is inside h1 and binded to h1 */
+h1 { position: relative; } /* relative to its normal position wihtout shifting, make non static position */
+h1 img {
+position: absolute; /* set position 'relative' to its parent - img (not to window) */
+top: 0;
+right: 0;
+}
