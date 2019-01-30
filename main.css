@@ -59,13 +59,19 @@ nav li {
  }
 
 .horizontalNavigation li {
-  display: inline-block;
+    float: left;
+  /* display: inline-block; */
+}
+.horizontalNavigation a {
+    display: block;
+    height: 3.25em;
+    line-height: 3.25em;
 }
 
-/* .verticalNavigation {
+.verticalNavigation {
   float: left;
   padding: 10px;
-} */
+}
 
  .verticalNavigation li {
     /* display: block; */
@@ -77,6 +83,19 @@ nav li {
     height: 3.25em;
     line-height: 3.25em;
 }
+
+label {
+    /* display: inline-block; */
+    float: left;
+    width: 40px;
+    vertical-align: top;
+    text-align: right;
+    margin-right: 15px;
+}
+
+input:disabled {
+    background-color: #333;
+    }
 
 header {
     width: 100%;
@@ -120,7 +139,7 @@ main {
 }
 .floatH1 {
     padding: 10px;
-    /* float: left; */
+    float: left;
     /* clear: left; */
 }
 

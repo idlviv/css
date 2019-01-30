@@ -128,3 +128,76 @@ background-blend-mode: normal|multiply|screen|overlay|darken|lighten|color-dodge
 
 LINKS
 a:link, :visited, :hover, :active
+/* create srite */
+a { background: #E7E7E7 url(images/pixy.png) no-repeat left top; }
+a:hover { background-position: 0 -39px; }
+
+TRANSFORM
+	-moz-transform: rotate(15deg); /* Для Firefox */
+    -ms-transform: rotate(15deg); /* Для IE */
+    -webkit-transform: rotate(15deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(15deg); /* Для Opera */
+	transform: rotate(15deg);			
+transform: rotate | scale | scaleX | scaleY | skewX | skewY | translate | translateX | translateY
+
+transform-origin: <x> <y> <z>
+
+transition: <переход> [, <переход> ]*
+	<переход> = [ none | <transition-property> ] || <transition-duration> || 
+	<transition-timing-function> || <transition-delay>
+transition: all 1s ease-in .5s;
+
+transition-timing-function: ease|ease-in|ease-out|ease-in-out|linear|step-start|step-end|steps|cubic-bezier
+transition-property: background-color;
+transition-duration: 1s;
+transition-delay: .5s;
+
+.navButton {
+	background-color: orange;
+	transition-property: background-color;
+	transition-duration: 1s;
+}
+.navButton:hover {
+	background-color: blue;
+}
+
+ANIMATION
+@-webkit-keyframes ..
+@keyframes growAndGlow {
+	from {
+		background-color: yellow;
+	}
+	50% {
+		transform: scale(1.5);
+		background-color: blue;
+		animation-timing-function: linear; /* can use here too */
+	}
+	to {
+		transform: scale(3);
+		background-color: red;
+	}
+}
+
+animation-name: growAndGlow;
+animation-duration: 1s;
+animation-delay: 1s;
+animation-timing-function: ease|ease-in|ease-out|ease-in-out|linear|step-start|step-end|steps|cubic-bezier
+
+animation: fadeOut 2s ease-in-out 5s 2 alternate forwards;
+-webkit-animation: fadeOut 2s ease-in-out 5s 2 alternate forwards;
+.announcement {
+	-webkit-animation-name: growAndGlow;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-delay: 1s;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-fill-mode: forwards;
+	animation-name: growAndGlow;
+	animation-duration: 1s;
+	animation-delay: 1s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-fill-mode: forwards; /* retain the style values from the last keyframe  */
+}
