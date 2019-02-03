@@ -225,3 +225,42 @@ right: 0;
 visibility: hidden;
 display: none;
 opacity: 0;
+
+SCSS
+a {
+	color: blue;
+	&:hover { /* compiler replace '&' with parent selector -> a:hover */ 
+	color: green;
+	}
+}
+--
+h1 {
+	font-family: "Raleway", Helvetica, Arial, sans-serif;
+	color: #222;
+}
+h2 {
+	@extend h1;
+	margin-left: 20px;
+}
+--
+@mixin rotate($deg: 10) {
+	-webkit-transform: rotate(#{$deg}deg);
+	-ms-transform: rotate(#{$deg}deg);
+	transform: rotate(#{$deg}deg);
+}
+.container {
+	@include rotate(10);
+}
+--
+@mixin mq-small-up {
+	@media(min-width: $screen-small) and (max-width: $screen-medium — 1px) {
+	@content;
+	}
+}
+p {
+	font-size: 1.5em;
+	@include mq-small-up {
+		font-size: 1.75em;
+		margin-top: 10px;
+	}
+}
