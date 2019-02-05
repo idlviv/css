@@ -228,7 +228,27 @@ visibility: hidden;
 display: none;
 opacity: 0;
 
-<<<<<<< HEAD
+FLEX
+.container {
+	display: flex;
+	flex-flow: column-reverse nowrap;
+	}
+/* container */
+flex-flow: flex-direction flex-wrap (default row nowrap)
+flex-direction: row|row-reverse|column|column-reverse|initial|inherit;
+flex-wrap: nowrap|wrap|wrap-reverse|initial|inherit;
+justify-content: flex-start|flex-end|center|space-between|space-around|initial|inherit; /* horizontal */
+align-items: stretch|center|flex-start|flex-end|baseline|initial|inherit; /* vertical */
+align-content: stretch|center|flex-start|flex-end|space-between|space-around|initial|inherit; /* vertical between lines */
+/* item */
+order: number|initial|inherit;
+align-self: auto|stretch|center|flex-start|flex-end|baseline|initial|inherit; /*vertical al of single item */
+flex: flex-grow flex-shrink flex-basis|auto|initial|inherit;
+	auto	Same as 1 1 auto
+	initial	Same as 0 1 auto
+	none	Same as 0 0 auto
+
+
 SCSS
 a {
 	color: blue;
@@ -267,24 +287,3 @@ p {
 		margin-top: 10px;
 	}
 }
-=======
-FLEX
-.container {
-	display: flex;
-	flex-flow: column-reverse nowrap;
-	}
-/* container */
-flex-flow: flex-direction flex-wrap (default row nowrap)
-flex-direction: row|row-reverse|column|column-reverse|initial|inherit;
-flex-wrap: nowrap|wrap|wrap-reverse|initial|inherit;
-justify-content: flex-start|flex-end|center|space-between|space-around|initial|inherit; /* horizontal */
-align-items: stretch|center|flex-start|flex-end|baseline|initial|inherit; /* vertical */
-align-content: stretch|center|flex-start|flex-end|space-between|space-around|initial|inherit; /* vertical between lines */
-/* item */
-order: number|initial|inherit;
-align-self: auto|stretch|center|flex-start|flex-end|baseline|initial|inherit; /*vertical al of single item */
-flex: flex-grow flex-shrink flex-basis|auto|initial|inherit;
-	auto	Same as 1 1 auto
-	initial	Same as 0 1 auto
-	none	Same as 0 0 auto
->>>>>>> 381ffe34fd04ccf09a54332379a96067eb494647
